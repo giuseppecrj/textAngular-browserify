@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="/font-awesome.css">
+  <link rel="stylesheet" href="/textAngular.css">
+  <link rel="stylesheet" href="/bootstrap.css">
+  <link rel="stylesheet" href="/main.css">
+</head>
+<body ng-app='app'>
+  <div class='container' ng-controller="MainController as ctrl">
+    <div example-directive></div>
+    <div text-angular ng-model='ctrl.credentials'></div>
+    <button class='submit-button' ng-click='ctrl.submit(ctrl.credentials)'>Submit</button>
+    <div ta-bind ng-model='ctrl.credentials'></div>
+  </div>
+  <script src="/vendor.js"></script>
+  <script src="/main.js"></script>
+</body>
+</html>

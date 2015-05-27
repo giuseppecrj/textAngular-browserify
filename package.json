@@ -1,0 +1,38 @@
+{
+  "name": "tutorial-shim",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "G <g@herman-scheer.com> (https://github.com/Herman-Scheer)",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.12.3",
+    "gulp-connect": "^2.2.0"
+  },
+  "devDependencies": {
+    "browserify": "^10.1.0",
+    "browserify-shim": "^3.8.6",
+    "gulp": "^3.8.11",
+    "gulp-copy": "0.0.2",
+    "vinyl-source-stream": "^1.1.0",
+    "wiredep": "^2.2.2"
+  },
+  "browser": {
+    "jquery": "./bower_components/jquery/dist/jquery.js",
+    "angular": "./bower_components/angular/angular.js",
+    "text-angular-sanitize": "./bower_components/textAngular/dist/textAngular-sanitize.js",
+    "text-angular-setup": "./bower_components/textAngular/dist/textAngularSetup.js",
+    "text-angular": "./bower_components/textAngular/dist/textAngular.js",
+    "rangy": "./bower_components/rangy/rangy-core.js",
+    "rangy-selection-save-restore": "./bower_components/rangy/rangy-selectionsaverestore.js"
+  },
+  "browserify-shim": "./shims.js",
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  }
+}
